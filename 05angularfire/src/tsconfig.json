@@ -13,8 +13,7 @@
     "typeRoots": [
       "../node_modules/@types"
     ],
-     "files":["../node_modules/firebase/firebase.d.ts"],
-    // ADD THIS
+     "files":["../node_modules/firebase/firebase.d.ts"],    
     "types": [
       "firebase"
     ]

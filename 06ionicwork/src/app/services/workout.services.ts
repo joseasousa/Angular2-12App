@@ -1,7 +1,7 @@
-import { Header } from 'ionic-angular/es2015';
+
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Http, Headers } from '@angular/http';
+
 import 'rxjs/Rx'
 
 @Injectable()
