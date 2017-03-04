@@ -1,0 +1,21 @@
+<div *ngIf="album" id="album">
+    <header class="album-header">
+        <div class="col-md-4" *ngIf="album">
+            <img src="{{album.images[0].url}}" class="album-thumbnail img-thumbnail">
+        </div>
+        <div class="col-md-8">
+            <h4>{{album.name}}</h4>
+        </div>
+    </header>
+
+    <div class="row">
+        <div *ngFor="let track of album.tracks.items">
+            <div class="well">
+                <h5>{{track.name}} - {{track.track_number}}</h5>
+                <a href="{{track.preview_url}}" target="_blanck">Preview</a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
