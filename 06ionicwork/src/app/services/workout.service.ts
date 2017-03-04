@@ -10,8 +10,8 @@ export class WorkoutService{
 
     constructor(http:Http){
         this.http = http;
-        this.apiKey = 'ZVKPCIukEtITp2pY8KWbJYkDlns8l-JE';
-        this.workoutsUrl = 'https://api.mlab.com/api/1/databases/myworkouts_app/collections/workouts';
+        this.apiKey = 'Lo4gFreCn3qVBDiFbBpEKQxx3aTgpgOf';
+        this.workoutsUrl = 'https://api.mlab.com/api/1/databases/ionicappjose06/collections/workouts';
     }
 
     getWorkouts(){
