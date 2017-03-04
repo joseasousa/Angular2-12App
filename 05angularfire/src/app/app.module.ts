@@ -9,11 +9,11 @@ import { FirebaseService } from './services/firebase.service';
 
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyB5-MmauF7weYBgiqqH4Wbc3A7yjamQf3o",
-  authDomain: "fir-6e4dd.firebaseapp.com",
-  databaseURL: "https://fir-6e4dd.firebaseio.com",
-  storageBucket: "fir-6e4dd.appspot.com",
-  messagingSenderId: "1019340223337"
+  apiKey: "<Api>",
+  authDomain: "<Domain>",
+  databaseURL: "<>",
+  storageBucket: "<>",
+  messagingSenderId: "<>"
 }
 
 @NgModule({
