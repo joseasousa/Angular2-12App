@@ -1,7 +1,7 @@
 {
-  "name": "04-mean",
+  "name": "meantodos",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple todos app that runs on the MEAN stack",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
