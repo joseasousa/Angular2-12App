@@ -1,14 +1,65 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Busque um filme</h1>           
+        <form (submit)="searchMovies()">
+            <input type="text" class="form-control" [(ngModel)]="searchStr" name="searchStr">   
+            <br>
+            <button class="btn btn-primary btn-lg">Buscar</button>
+         </form>
+    </div>    
+</div>
 
-  </div>
-</nav>
+<div *ngIf="searchRes" class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Resultado da Busca</h3>    
+    </div> 
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let movie of searchRes;let i=index" class="col-md-2">
+                <div *ngIf="i < 18">
+                    <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    <h4>{{movie.title}}</h4>  
+                    <p>{{movie.release_date | date:'dd/MM/yyyy'}}</p>  
+                    
+                    <p><a class="btn btn-primary" routerLink="/movie/{{movie.id}}">+ Detalhes</a></p>
+                </div>
+            </div>    
+        </div>    
+    </div>   
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Filmes Populares</h3>    
+    </div> 
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let movie of popularList;let i=index" class="col-md-2">
+                <div *ngIf="i < 6">
+                    <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    <h4>{{movie.title}}</h4>  
+                    <p>{{movie.release_date | date:'dd/MM/yyyy'}}</p>  
+                    <p><a class="btn btn-primary" routerLink="/movie/{{movie.id}}">+ Detalhes</a></p>
+                </div>
+            </div>    
+        </div>    
+    </div>   
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Em Alta</h3>    
+    </div> 
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let movie of theatersList;let i=index" class="col-md-2">
+                <div *ngIf="i < 6">
+                    <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    <h4>{{movie.title}}</h4>  
+                    <p>{{movie.release_date | date:'dd/MM/yyyy'}}</p>  
+                    <p><a class="btn btn-primary" routerLink="/movie/{{movie.id}}">+ Detalhes</a></p>
+                </div>
+            </div>    
+        </div>    
+    </div>   
+</div>
